@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Functions Practice</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- LONG WAY THAT CAN CAUSE BUGS IF NOT DONE CORRECT -->
+        <h1 onclick="if(this.innerHTML=='Functions Practice L.W'){this.innerHTML='Is awesome'} else{this.innerHTML='Functions Practice L.W'}">
+        Functions Practice L.W</h1><br/>
+
+        <!-- SHORT WAY IN SCRIPT FUNCTION -->
+        <h1 id="heading" onclick="changeText()">Functions Practice E.W</h1><br/>
+
+        <!-- Different function to add into html within Javascipt -->
+        <p id="addition"></p><br/>
+
+        <!-- Lesson 8 same as top but different way -->
+        <p id="addition2"></p>
+        
+        <script>
+
+            addNumbers(10, 7);
+            document.getElementById("addition2").innerHTML = addNumbers2(10, 20);
+
+            function changeText(){
+                if(document.getElementById("heading").innerHTML=='Functions Practice E.W'){
+                    document.getElementById("heading").innerHTML='Is awesome'
+                } else{
+                    document.getElementById("heading").innerHTML='Functions Practice E.W'
+                }
+            }
+
+            function addNumbers(num1, num2){
+                document.getElementById("addition").innerHTML = num1 + num2;
+            }
+
+            function addNumbers2(num1, num2){
+                return num1 + num2;
+            }
+        </script>
+    </body>
+</html>

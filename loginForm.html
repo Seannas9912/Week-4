@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mini Project(FNB Academy) - Login Form</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <p>Welcome! Please log in:</p>
+        <br/>
+        <form>
+            <label for="usernameInput">Username: 
+                <input type="text" id="usernameInput" />
+            </label>
+            <br/>
+            <br/>
+            <label for="passwordInput">Password:
+                <input type="password" id="passwordInput" />
+            </label>
+            <br/>
+            <br/>
+            <a href="#" onclick="verifyUser()">Login</a>
+            <br/>
+            <p id="message"></p>
+        </form>
+        
+        <script>
+
+            function verifyUser(){
+                var username = document.getElementById("usernameInput").value;
+                var password = document.getElementById("passwordInput").value;
+
+                checkUserCredentials(username, password);
+            }
+
+            function checkUserCredentials(username, password) {
+                var systemUsername = "Bond";
+                var systemPassword = "007";
+
+                if (username == systemUsername && password == systemPassword) {
+                    document.getElementById("message").innerText = "logging in...";
+                } else {
+                    document.getElementById("message").innerText = "Invalid username or password.";
+                }
+            }
+
+        </script>
+    </body>
+</html>
